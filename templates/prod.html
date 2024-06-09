@@ -1,0 +1,157 @@
+{% extends "layout_new.html" %}
+
+{% block main %}
+    <div id="special_header">
+        <header class="d-flex container-fluid justify-content-between">
+            <a href="../">
+                <img src="../static/logowosh_canon.png">
+            </a>
+            <form action="/query" method="get">
+                <input type="text" placeholder="Pesquisa" name="key">
+            </form>
+        </header>
+    </div>
+    <div id="prod_demo">
+        <div id="prod_img">
+            <div>
+                <a></a>
+                <img src=.{{ clothing["image"] }} id="prod_shirt">
+                <a href={{ clothing["id"] + 1 }}><img src="../static/right_link.png" id="right_link"></a>
+            </div>
+            <div>
+                <img src="../static/made_in_wosh_canon.png" id="prod_made_wosh">
+            </div>
+        </div>
+        <div id="desc_buy">
+            <h1>{{ clothing["name"].upper() }}</h1>
+            <h1>R${{ "{:.2f}".format(clothing["price"]) }}</h1>
+            <form action="../cart" method="POST">
+                <input type="number" name="id" value={{ clothing["id"] }}>
+                <button>
+                    Adicionar ao Carrinho
+                </button>
+                <br>
+                Cores:
+                <div class="d-flex" id="color_select">
+                    {% for i in clothing["colors"].split("_") %}
+                        <input value={{ i }} type="radio" name="color" class={{ i }} checked>
+                    {% endfor %}
+                </div>
+                <br>
+                Tamanhos:
+                <div id="size_select">
+                    {% for i in clothing["sizes"].split("_") %}
+                        <input value={{ i }} type="radio" name="size" checked>
+                    {% endfor %}
+                </div>
+            </form>
+        </div>
+    </div>
+    <style>
+        input[type="radio"][name="color"] {
+            width: 1px;
+            height: 1px;
+        }
+
+        input[type="radio"][name="color"]:after {
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            background-color: #d1d3d1;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 2px solid rgb(32, 37, 43)
+        }
+
+        #main > #prod_demo #size_select {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5%;
+        }
+
+        #main > #prod_demo #size_select > *:after {
+            width: 30%;
+            height: 20px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            color: lightgray;
+            content: '';
+            visibility: visible;
+            align-content: center;
+            padding: 50%;
+            background-color: rgb(43, 48, 54);
+        }
+
+        #main > #prod_demo #size_select > *:checked:after {
+            width: 30%;
+            height: 20px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            color: rgb(43, 48, 54);
+            content: '';
+            visibility: visible;
+            align-content: center;
+            padding: 50%;
+            background-color: lightgray;
+        }
+
+        #main > #prod_demo #size_select > [value="P"]:after {
+            content: 'P'
+        }
+
+        #main > #prod_demo #size_select > [value="M"]:after {
+            content: 'M'
+        }
+
+        #main > #prod_demo #size_select > [value="G"]:after {
+            content: 'G'
+        }
+        
+        input[type="radio"][name="color"]:checked:after {
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 2px solid white
+        }
+
+        input[type="radio"].preto:after {
+            background-color: black;
+        }
+
+        input[type="radio"].laranja:after {
+            background-color: orange;
+        }
+
+        input[type="radio"].branco:after {
+            background-color: white;
+        }
+
+        input[type="radio"].vermelho:after {
+            background-color: red;
+        }
+
+        input[type="radio"].azul:after {
+            background-color: blue;
+        }
+
+        input[type="radio"].verde:after {
+            background-color: green;
+        }
+
+        input[type="radio"].roxo:after {
+            background-color: purple;
+        }
+    </style>
+{% endblock %}

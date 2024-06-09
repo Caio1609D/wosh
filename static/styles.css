@@ -1,0 +1,584 @@
+#main {
+	font-size: calc((16px + (1.25vh + 1.25vw) / 2) / 2)
+}
+
+#main  header {
+	color: #FFFFFF;
+	z-index: 1;
+	height: 12%;
+	margin-bottom: 7.5%;
+	padding: 2px!important;
+	width: 100vw
+}
+
+#main  header > * {
+	margin-bottom: auto;
+	margin-top: auto;
+}
+
+.h_link {
+	font-size: 100%;
+}
+
+#main  header > form {
+	width: 35%;
+}
+
+#main  header > form > input {
+	width: 100%
+}
+
+#main  header > a {
+	width: 5%;
+	margin-left: 2.5%
+}
+
+#main  header > a > img {
+	max-width: 100%;
+	height: auto
+}
+
+#main > #special_header > header {
+	color: #FFFFFF;
+	z-index: 1;
+	height: 12%;
+	margin-bottom: 0;
+	padding: 2px!important;
+	max-width: 100%
+}
+
+#main > #special_header > header > form {
+	margin-right: 32.5%;
+}
+
+@media screen and (orientation: landscape) {
+	#main > #prod_demo > #prod_img {
+		height: 100%;
+		background-color: rgb(43, 48, 54);
+	}
+
+	#main > #prod_demo > div > header {
+		max-height: 3%;
+		margin-top: 1%;
+		margin-bottom: 1%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	#main > #prod_demo > div > header > a {
+		max-height: 90%;
+		height: 90%;
+		width: 7.5%;
+	}
+
+	#main > #prod_demo > div > header > a > img {
+		max-height: 100%;
+		max-width: 100%;
+	}
+
+	#main > #prod_demo > #prod_img #prod_shirt {
+		max-width: 90%;
+		height: auto;
+	}
+
+	#main > #prod_demo > #prod_img > div > #prod_made_wosh {
+		height: 7.5%;
+		width: 7.5%;
+		margin-left: 2.5%;
+		padding-bottom: 2.5%
+	}
+
+	#main > #prod_demo > div > header > input {
+		width: 50%
+	}
+
+	#main > #prod_demo #color_select > * {
+		margin-right: 15%;
+	}
+
+	#main > #prod_demo {
+		height: 100vh;
+		display: flex;
+		color: white;
+		width: 100%;
+		padding: 2.5%
+	}
+
+	#main > #prod_demo > #desc_buy {
+		width: auto;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		background-color: rgb(32, 37, 43);
+		padding-right: 3%;
+		padding-left: 3%;
+	}
+
+	#main > #prod_demo > #prod_img {
+		width: 100%;
+	}
+
+	#main > #prod_demo > #desc_buy > form > .buy {
+		border-radius: 5px;
+		color: orangered
+	}
+
+	#main > #prod_demo h1 {
+		font-size: 5vh;
+	}
+
+	#main > #prod_demo > #desc_buy > form > button {
+		background-color: rgb(43, 48, 54);
+		color: lightgray;
+		border: none;
+		width: 100%;
+		height: 50%;
+		margin-bottom: 10%;
+	}
+
+	#main > #prod_demo > #prod_img > div {
+		display: flex;
+		align-items: center;
+	}
+
+	#main > #prod_demo > #prod_img > div > a {
+		width: 5%;
+		height: 100%;
+	}
+
+	#main > #prod_demo > #prod_img > div > a > img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	#main > #prod_demo > #prod_img {
+		width: 100%;
+		height: 45vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		background-color: rgb(43, 48, 54);
+		position: relative;
+	}
+
+	#main > #prod_demo > div > header {
+		width: 100%;
+		margin-right: 1%;
+		margin-left: 1%;
+		flex-direction: row;
+		align-items: center;
+		position: absolute;
+		top: 0;
+	}
+
+	#main > #prod_demo > div > header > a {
+		max-width: 10%;
+		width: 10%;
+		height: auto;
+	}
+
+	#main > #prod_demo > div > header > a > img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	#main > #prod_demo > #prod_img #prod_shirt {
+		max-height: auto;
+		max-width: 90%;
+	}
+
+	#main > #prod_demo > #prod_img > div > #prod_made_wosh {
+		width: 15%;
+		height: auto;
+		margin-bottom: 2.5%;
+		padding-left: 2.5%
+	}
+
+	#main > #prod_demo > div > header > input {
+		height: 50%
+	}
+
+	#main > #prod_demo #color_select > * {
+		margin-top: 15%;
+	}
+	
+	#main > #prod_demo #size_select > * {
+		margin-right: 5%;
+		width: 1px;
+		height: 1px
+	}
+
+	#main > #prod_demo {
+		width: 100vw;
+		color: white;
+		height: 100%;
+		padding: 1.25%;
+	}
+
+	#main > #prod_demo > #desc_buy {
+		height: 55vh;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		background-color: rgb(32, 37, 43);
+		padding-top: 3%;
+		padding-bottom: 3%;
+	}
+
+	#main > #prod_demo > #desc_buy > form > button {
+		background-color: rgb(43, 48, 54);
+		color: lightgray;
+		border: none;
+		width: 100%;
+		height: 50%;
+		margin-bottom: 10%;
+	}
+
+	#main > #prod_demo h1 {
+		font-size: 5vw;
+	}
+
+	#main > #prod_demo > #prod_img > div {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	#main > #prod_demo > #prod_img > div > a {
+		width: 5%;
+		height: min-content;
+	}
+
+	#main > #prod_demo > #prod_img > div > a > img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+#main > #register form {
+	background-color: #33363D;
+	padding: 3.75%
+}
+
+#main > #register form img {
+	max-width: 35%;
+	height: auto;
+	margin-bottom: 35%;
+}
+
+#index {
+	color: white;
+}
+
+input[name="key"] {
+	border-radius: 5px;
+	color: white;
+	border-style: none;
+	background: rgb(50, 55, 61);
+}
+
+#custom > div > div > form {
+	width: 50%;
+}
+
+#main > #register {
+	text-align: center;
+}
+
+#main > #register div {
+	color: white;
+	font-size: 75%;
+	font-weight: 200%;
+	text-align: start;
+}
+
+#main > #register button {
+	background-color: rgb(43, 48, 54);
+	color: lightgray;
+	border: none;
+	padding: 2.5%;
+	width: 37.5%
+}
+
+#main > #cart_div > button {
+	background-color: rgb(43, 48, 54);
+	color: lightgray;
+	border: none;
+	padding: 1%;
+}
+
+@media screen and (orientation: landscape) {
+	#main > #register > form {
+		width: 20%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	#main > #register > form {
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+		height: 20%;
+	}
+}
+
+#main > #register > form > input[type="text"] {
+	border-radius: 5px;
+	color: white;
+	border-style: none;
+	background: rgb(33, 36, 43);
+}
+
+#main > #register > form > input[type="password"] {
+	border-radius: 5px;
+	color: white;
+	border-style: none;
+	background: rgb(33, 36, 43);
+}
+
+#main > #register > form > input {
+	margin-bottom: 5%;
+	width: 100%;
+	margin-left: auto;
+	height: 4vh;
+	font-size: 2vh;
+}
+
+#custom > div > div > form > input[name="print"]::after {
+	content: "";
+}
+
+#custom > div > div > form > select[name="size"] {
+	width: 40%;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+}
+
+html {
+	height: 100%;
+	background-image: url("fundo_do_site.png");
+	background-size: 100% 100%;
+}
+
+#main > #index > #intro {
+	overflow: hidden
+}
+
+#index > #intro > #text {
+	float: left;
+	width: 25%;
+	margin-left: 2%;
+}
+
+#index > #intro > #text > img {
+	max-width: 100%;
+	width: 100%;
+	max-height: auto;
+	width: 100%
+}
+
+#index > #intro > #text > div#market {
+	color: white;
+	font-size: 90%;
+	width: 100%;
+	margin-top: 10%;
+	margin-bottom: 30%;
+	background: none;
+	box-shadow: inset 100% 100% rgb(43, 46, 55);
+}
+
+#index > #intro > #text > div#insta {
+	color: white;
+	font-size: 90%;
+	width: 22.2%
+}
+
+#index > #intro > #text > #logowosh {
+	max-width: 75%;
+	width: 100%;
+	max-height: auto;
+	width: 100%
+}
+
+#insta {
+	max-height: min-content;
+}
+
+/*#insta::before {
+	height: 100%;
+	content: url("../static/insta_logo.png")
+}*/
+
+#index > #intro > #images {
+	margin-right: 5%;
+	margin-left: 5%;
+	width: auto;
+}
+
+#index > #intro > #images > img {
+	width: 75%;
+	margin-left: 0%;
+}
+
+@media screen and (orientation: landscape) {
+	#main {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		width: 100vw;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	#main {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		width: 100%;
+	}
+}
+
+#index > #links {
+	justify-content: space-between;
+}
+
+.link > img {
+	width: 60%
+}
+
+#index > #sells > .cell {
+	margin-top: 5%;
+	display: flex;
+	width: 100%;
+	padding-left: 1.25%;
+	padding-right: 1.25%;
+}
+
+#index > #sells > .cell > a {
+	height: auto;
+	width: 30%;
+	margin-left: 1.25%;
+	margin-right: 1.25%;
+}
+
+#index > #sells > .cell > a > .showcase {
+	border-style: solid;
+	border-width: 10%;
+	border-color: #33363D;
+	text-align: center;
+}
+
+.showcase > div {
+	color: white;
+	background-color: #33363D;
+}
+
+.showcase > img {
+	width: 100%
+}
+
+form > input[name=id] {
+	display: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+header > a:not([src="../"]) {
+	margin-top: auto;
+	margin-bottom: auto;
+	padding: 0px;
+	font-size: large;
+	transition: border-bottom 0.1s linear;
+}
+
+header > a:hover:not(:optional([href="../"]):optional([href="/"])) {
+	border-bottom: 2px solid white;
+}
+
+#main > #cart_div {
+	padding: 2.5%;
+}
+
+#main > #cart_div .cart_cell {
+	width: 100%;
+	margin-bottom: 5%;
+	background-color: rgb(43, 48, 54);
+	position: relative;
+}
+
+#main > #cart_div .cart_cell > div {
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#main > #cart_div .cart_cell .shirt {
+	max-width: 100%;
+	height: auto;
+	margin-top: 1%;
+	margin-left: 1.5%;
+	background-color: rgb(32, 37, 43);
+}
+
+#main > #cart_div .cart_cell .cart_logo {
+	max-width: 5%;
+	height: auto;
+	margin-top: 1%;
+	margin-right: 1.5%;
+	position: absolute;
+	right: 0;
+	top:0;
+}
+
+#main > #cart_div .cart_cell .delete_order {
+	width: 15%;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+#main > #cart_div .cart_cell .delete_order > input[type="number"] {
+	display: none;
+}
+
+#main > #cart_div .cart_cell .delete_order > button {
+	width: 100%;
+}
+
+#main > #cart_div h5 {
+	color: white;
+	font-size: calc((2vh + 2vw) / 2)
+}
+
+#main > #cart_div h6 {
+	color: gray;
+	font-size: calc((1.5vh + 1.5vw) / 2)
+}
+
+#main > #cart_div h1 {
+	color: white
+}
+
+#main > #buy_page {
+	color: white
+}

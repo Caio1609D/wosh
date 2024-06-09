@@ -1,0 +1,25 @@
+{% extends "layout_new.html" %}
+
+{% block main %}
+    <header class="d-flex container-fluid justify-content-between px-5">
+        <a href="/">
+            <img src="../static/logowosh_canon.png">
+        </a>
+        <form class="my-auto" action="/query" method="get">
+            <input type="text" placeholder="Pesquisa" name="key">
+        </form>
+        <a class="h_link">HOMER</a>
+        <a class="h_link" href="/custom">CARRINHO</a>
+    </header>
+    <div id="buy_page">
+        Compra quase realizada, só falta vc depositar nesse pix bonito. Aproveita e coloca o nomezinho da sua conta bancária pra a gente perceber quando você pagou e o lugar que você quer que a gente entregue
+        <img src="../static/Qr_Code.jpeg" style="width: 10vw">
+        <form method="POST" action="/buy">
+            <input type="text" name="user_bank_name" placeholder="Conta">
+            <input type="text" name="adress" placeholder="Endereço">
+            <button>Comprar</button>
+        </form>
+        <p>OBS: Esse site tem fins apenas demonstrativos. Sua encomenda não vai chegar ;&rpar; <br/>
+        Você pode, no entanto, enviar o formulário acima, ele vai pro banco de dados</p>
+    </div>
+{% endblock %}

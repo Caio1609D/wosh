@@ -1,0 +1,33 @@
+{% extends "layout_new.html" %}
+
+{% block main %}
+    <header class="d-flex container-fluid justify-content-between px-5">
+        <a href="/">
+            <img src="../static/logowosh_canon.png">
+        </a>
+        <form class="my-auto" action="/query" method="get">
+            <input type="text" placeholder="Pesquisa" name="key">
+        </form>
+        <a class="h_link">HOMER</a>
+        <a class="h_link" href="/custom">CARRINHO</a>
+    </header>
+    <div id="cart_div">
+        {% for i in clothings %}
+            <a href=/prod/{{ i["id"] }}>
+                <div class="cart_cell">
+                    <div>
+                        <img src={{ i["image"] }} class="shirt">
+                        <h5>{{ i["name"] }}</h5>
+                        <h5>R${{ "{:.2f}".format(i["price"]) }}</h5>
+                        <h6>{{ i["colors"].split("_")|length }} color(s) avaliable</h6>
+                    </div>
+                    <img src="../static/logowosh_canon.png" class="cart_logo">
+                </div>
+            </a>
+        {% endfor %}
+
+        {% if clothings == [] %}
+            <h1>Hmmm, não encontramos nenhum item que se parece com a sua pesquisa. Que pena</h1>
+        {% endif %}
+    </div>
+{% endblock %}

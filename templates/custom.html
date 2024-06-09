@@ -1,0 +1,56 @@
+{% extends "layout_new.html" %}
+
+{% block main %}
+    <header class="d-flex container-fluid justify-content-between px-5">
+        <a href="/">
+            <img src="../static/logowosh_canon.png">
+        </a>
+        <form class="my-auto" action="/query" method="get">
+            <input type="text" placeholder="Pesquisa" name="key">
+        </form>
+        <a class="h_link">HOMER</a>
+        <a class="h_link" href="/custom">CARRINHO</a>
+    </header>
+    <div id="custom">
+        <div class="d-flex container-fluid">
+            <div>
+                <form action="/custom" method="POST" name="order-form">
+                    <select name="size">
+                        <option value="P">P</option>
+                        <option value="M">M</option>
+                        <option value="G">G</option>
+                    </select>
+                    <input type="file" name="print" accept="image/png, image/jpeg">
+                    <input type="text" class="d-none" name="binary">
+                    <button id="order-button">Fazer pedido</button>
+                </form>
+            </div>
+            <img>
+        </div>
+    </div>
+    <script>
+        const form = document.getElementsByName("order-form")[0];
+        const button = document.getElementById("order-button");
+        /*console.log(form)
+        console.log(form.print)*/
+
+        let binaryBuffer;
+
+        button.addEventListener("click", (event) => {
+            event.preventDefault();
+            var file = form.print.files[0];
+            var fileReader = new FileReader();
+            //console.log(file)
+
+            fileReader.readAsDataURL(file)
+            fileReader.onload = () => {
+                binaryBuffer = fileReader.result;
+
+                form.binary.value = binaryBuffer;
+                //console.log(form.binary.value);
+                
+                form.submit();
+            }
+        });
+    </script>
+{% endblock %}

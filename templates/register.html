@@ -1,0 +1,27 @@
+{% extends "layout_new.html" %}
+
+{% block main %}
+    <header class="d-flex container-fluid justify-content-between">
+        <a href="/">
+            <img src="../static/logowosh_canon.png">
+        </a>
+        <form action="/query" method="get">
+            <input type="text" placeholder="Pesquisa" name="key">
+        </form>
+        <a class="h_link">HOMER</a>
+        <a class="h_link" href="/custom">CARRINHO</a>
+    </header>
+    <div id="register">
+        <form action="/register" method="post">
+            <img src="../static/logowosh_canon.png">
+            <img src="../static/made_in_wosh_canon.png">
+            <div>Crie uma Conta</div>
+            <input type="text" placeholder="Nome" name="name">
+            <input type="text" placeholder="E_mail" name="e_mail">
+            <input type="password" placeholder="Senha" name="password">
+            <input type="password" placeholder="Confirmar Senha" name="confirm_password">
+            <br>
+            <button>Cadastrar</button>
+        </form>
+    </div>
+{% endblock %}

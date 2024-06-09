@@ -1,0 +1,69 @@
+{% extends "layout_new.html" %}
+
+{% block main %}
+    <script>
+        // @ts-nocheck
+    </script>
+    <header class="d-flex container-fluid justify-content-between">
+            <a href="/">
+                <img src="../static/logowosh_canon.png">
+            </a>
+			<form action="/query" method="get">
+                <input type="text" placeholder="Pesquisa" name="key">
+			</form>
+            <a class="h_link">HOMER</a>
+            {% if username == '' %}
+                <a class="h_link" href="/login">LOGIN
+            {% else %}
+                <a class="h_link">{{ username.upper() }}</a>
+                <a class="h_link" href="/login">TROCAR CONTA</a>
+            {% endif %}
+			<a class="h_link" href="/cart">CARRINHO</a>
+	</header>
+    <div id="index">
+        <div id="intro">
+            <div id="text">
+                <img src="../static/logowosh_canon.png" id="logowosh">
+                <img src="../static/made_in_wosh_canon.png">
+                <div id="market">
+                    O melhor do Steetwear na sua frente, uma marca acessível, de boa qualidade, compre na WoshWear, preços acessíveis com frete grátis
+                </div>
+                <div id="insta">
+                    @_woshwear
+                </div>
+            </div>
+            <div id="images">
+                <img src="../static/blusa.png"a>
+            </div>
+        </div>
+        <div class="d-flex" id="links">
+            {% for i in prods %}
+                <div class="link">
+                    <img src={{ i["imagelink"] }}>
+                    <div>{{ i["name"] }}</div>
+                </div>
+            {% endfor %}
+        </div>
+        <div id="sells">
+            {% for i in clothes %}
+                <div class="cell">
+                {% for j in i %}
+                    <a href="/prod/{{ j["id"] }}">
+                        <div class="showcase">
+                            <img src="{{ j["image"] }}">
+                            <div>{{ j["name"] }}</div>
+                            <div>{{ j["price"] }}</div>
+                        </div>
+                    </a>
+                {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <style>
+        #links > * {
+            width: calc(100% / {{ prods|length + 1 }});
+            text-align: center
+        }
+    </style>
+{% endblock %}
