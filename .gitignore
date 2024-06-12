@@ -1,0 +1,13 @@
+# Só os arquivos mais importantes de não mandar
+
+# Pra não mandar o wosh.db
+*.db
+
+# Pra não mandar informações de sessão
+flask_session/
+
+# Pra não mandar o cache do Python
+__pycache__/
+
+# Pra não mandar o venv
+venv/
