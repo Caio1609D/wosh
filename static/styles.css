@@ -582,3 +582,12 @@ header > a:hover:not(:optional([href="../"]):optional([href="/"])) {
 #main > #buy_page {
 	color: white
 }
+
+#credits {
+	color: white;
+	text-align: center;
+}
+
+div#register > form > a {
+	color: white;
+}
